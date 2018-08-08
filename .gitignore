@@ -1,0 +1,12 @@
+__pycache__/
+m3u8/
+*.pyc
+output/
+video/
+.idea/
+error.txt
+sql_insert.py
+image/
+test.*
+test_mysql.py
+download_plus.py
