@@ -1,11 +1,15 @@
 # 52av-client
-52av python 命令行客户端
+52av  command client
 
-【】 python3
+this project is based on python3  
 
-【使用方法】
+【Usage】
+setp 1：python server.py
 
-python movie.py
+setp 2: python movie.py
+
+************
+JUST FOR TECHNICAL STUDIES!!!!
 
 
 
