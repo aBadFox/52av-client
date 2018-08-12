@@ -11,6 +11,8 @@
 
 
 【使用方法】
+
+
 setp 1 ： python server.py  开启后台服务器 
 
 step 2 :  python movie.py  
