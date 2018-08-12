@@ -69,7 +69,6 @@ def prase_all_item(html, debug=False):
         if not video_url:
             continue
         if debug:
-            # redis_conn.incr('video')
             print('[*]', video_url)
         issue_time = datetime.datetime.strptime(issue_time, '%Y-%m-%d')
         parmars = (title, movie_url, image_url, image_path, issue_time, movie_object_id, video_url)

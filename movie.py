@@ -7,8 +7,8 @@ import multiprocessing
 import requests
 
 from movie_list import get_movie_list
-# from download_plus import download_movie
-from download import download_movie
+from download_plus import download_movie
+# from download import download_movie
 from get_video import get_m3u8_url
 from util import query_from_sql, insert_to_mysql
 from deamon import prase_html
@@ -68,14 +68,12 @@ def init_env_environment(display=False):
     :return:
     '''
     global redirect
-    dirs = ['output', 'm3u8', 'video', 'image', 'temp']
+    dirs = ['output', 'm3u8', 'video', 'image']
     for path in dirs:
         if not (os.path.exists(path) and os.path.isdir(path)):
             os.mkdir(path)
     for i in os.listdir('./video'):
         os.remove(os.path.abspath('./video/' + i))
-    if os.path.exists('error.txt'):
-        os.remove('error.txt')
     if display:
         print('[*] 环境初始化成功!')
 

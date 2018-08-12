@@ -4,10 +4,12 @@
 from urllib.parse import urljoin
 import re
 import datetime
-from deamon import add_html
+from deamon import Client
 from bs4 import BeautifulSoup
 
 from util import get_md5
+
+client = Client()
 
 
 def prase_movie_list(base_url, html, movie_list, large):
@@ -72,7 +74,10 @@ def get_movie_list(session, base_url, movie_list, large=False, deamon=None):
         result = session.get(base_url)
         print('[*] 当前网址 %s' % base_url)
         if result.status_code == 200:
-            add_html(result.text)
+            try:
+                client.add_html(result.text)
+            except:
+                print("[!] 添加网页失败 请尝试 python3 server.py")
             return prase_movie_list(base_url, result.text, movie_list, large)
     except IndexError:
         print('error')
