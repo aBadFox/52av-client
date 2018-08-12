@@ -1,7 +1,12 @@
 # 52av-client
 
 
-对52av.tv python版 命令行客户端
+52av.tv 网站 
+
+
+
+
+python版 命令行客户端
 
 
 对爬取后的数据存储到Sqlite3数据库中
